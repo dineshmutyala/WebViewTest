@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <style name="Theme.Toolbar.Popup.Theme" parent="Theme.MaterialComponents.Light.Bridge">
+    </style>
+    <style name="CommonsTheme" parent="@style/Theme.MaterialComponents.Light.NoActionBar.Bridge">
+        <!-- Trying to remove this right now leads to a circular dependency problem due to the name of Theme below -->
+    </style>
+    <style name="MyTheme" parent="@style/Theme.AppCompat.NoActionBar">
+        <item name="android:forceDarkAllowed" tools:targetApi="q">true</item>
+    </style>
+    <style name="Theme" parent="CommonsTheme">
+        <item name="android:colorControlHighlight">?attr/colorControlHighlight</item>
+        <item name="android:colorAccent">?attr/colorAccent</item>
+    </style>
+    <style name="Theme.Toolbar.Theme" parent="Theme">
+        <item name="selectableItemBackground">?android:selectableItemBackground</item>
+    </style>
+</resources>
